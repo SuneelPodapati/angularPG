@@ -1,0 +1,86 @@
+ <div class="container-fluid">
+  <h3> Add Customer </h3>
+  <form (ngSubmit)="addTenant(tenantForm.value)" #tenantForm="ngForm">
+    <div class="form-group">
+      <label for="firstName">FirstName:</label>
+      <input type="text"
+       class="form-control input-sm"
+        id="firstName" 
+        placeholder="Enter FirstName" 
+        name="firstName"
+        ngModel
+        required>
+    </div>
+     <div class="form-group" (click)='getRoomCapacity()'>
+      <label for="lastName">LastName:</label>
+      <input type="text"
+       class="form-control input-sm"
+        id="lasttName" 
+        placeholder="Enter LastName" 
+        name="lastName"
+        ngModel
+        required>
+    </div> 
+    <div class="form-group">
+      <label for="mobile">Mobile Number:</label>
+      <input type="text"
+       class="form-control input-sm"
+        id="mobile" 
+        placeholder="Enter mobile number" 
+        name="mobile"
+        ngModel
+        required>
+    </div>
+     
+     <div class="form-group">
+          <label for="roomCapacity">Room capacity</label>
+          <select class="form-control"  id="roomCapacity"
+             required 
+            ngModel
+            name="roomCapacity">
+            <option>select room capacity</option>
+            <option *ngFor="let opt of roomcapacity" >{{opt}}</option>
+          </select>
+        </div>
+    
+    <div class="form-group">
+      <label>Room type :</label>
+     <div class="checkbox-inline input-sm">
+     <label><input 
+      type="checkbox"
+      name="roomType_AC"
+      ngModel
+      value="ac">Ac</label>
+     </div>
+    </div>
+
+     <!-- <div class="form-group">
+     <label for="roomNumber">Room Number: </label>
+     <select id="roomNumber"
+       name="roomNumber" class="form-control"
+      [(ngModel)]="tenant.roomNumber">
+       <option *ngFor="let number of rooms">{{number}}</option>
+     </select>
+    </div> -->
+
+       <div class="form-group ">
+     <label for="checkinDate"> Checkin Date: </label>
+     <input type="date"
+      class="form-control input-sm"
+       id="checkinDate"
+       name="checkinDate"
+      ngModel
+       required>
+    </div>
+    
+
+    <div class="form-group">
+      <button class="btn btn-success"
+      type="submit"
+      >
+      Add Customer
+      </button>
+    </div>
+  </form>
+</div> 
+

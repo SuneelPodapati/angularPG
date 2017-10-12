@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <h3>Add Room </h3>
+  <form (ngSubmit)="addRoom(roomForm.value)" #roomForm="ngForm">
+    <div class="form-group">
+      <label for="roomCapacity">Room Capacity:</label>
+      <input type="number"
+       class="form-control input-sm"
+        id="roomCapacity" 
+        placeholder="Enter Room Capacity" 
+        name="roomCapacity"
+        ngModel
+        min="0"
+        required>
+    </div>
+
+      <div class="form-group">
+      <label for="totalRooms">Total Rooms:</label>
+      <input type="number"
+       class="form-control input-sm"
+        id="totalRooms" 
+        placeholder="Enter total Room " 
+        name="totalRooms"
+        ngModel
+        min="0"
+        required>
+      </div>
+
+      <div class="form-group">
+       <label>Room type :</label>
+        <div class="checkbox-inline input-sm">
+         <label><input 
+         type="checkbox"
+         name="roomType"
+         ngModel
+         value="ac">Ac</label>
+       </div>
+    </div>
+            
+        <div class="form-group">
+      <button class="btn btn-primary"
+      type="submit">
+      Add Room
+      </button>
+    </div>
+  </form>
+</div>
