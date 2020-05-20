@@ -1,2 +1,2 @@
-# temp
-## repository for all temporary files for sharing across devices and dev environments
+# PG Management app
+## an angular sample app for PG management
